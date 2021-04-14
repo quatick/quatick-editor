@@ -1,0 +1,203 @@
+import cx from "classnames"
+import { EditorState, Transaction } from "prosemirror-state"
+import React from "react"
+import ReactDOM from "react-dom"
+
+import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import CommandButton from "app/core/components/Editor/src/ui/command/CommandButton"
+import CommandMenuButton from "app/core/components/Editor/src/ui/command/CommandMenuButton"
+import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
+import { COMMAND_GROUPS, COMMAND_GROUPS_T, parseLabel } from "./EditorToolbarConfig"
+import Icon from "app/core/components/Editor/src/ui/Icon"
+import ResizeObserver from "app/core/components/Editor/src/ui/ResizeObserver"
+import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import isReactClass from "app/core/components/Editor/src/ui/isReactClass"
+import { prefixed } from "app/core/components/Editor/src/util"
+
+interface Props {
+  disabled?: boolean
+  dispatchTransaction: (tr: Transaction) => void | null | undefined
+  editorState: EditorState
+  editorView?: EditorView
+  onReady?: (view: EditorView) => void | null | undefined
+  readOnly?: boolean
+}
+
+interface State {
+  expanded: boolean
+  wrapped: boolean
+  cmd_groups: COMMAND_GROUPS_T
+}
+
+class EditorToolbar extends React.Component<Props, State> {
+  _body = null
+
+  state = {
+    expanded: false,
+    wrapped: false,
+    cmd_groups: [], // COMMAND_GROUPS //[]
+  }
+
+  componentDidUpdate() {
+    if (this.props.editorView?.runtime && this.state.cmd_groups.length === 0) {
+      const { filterCommandGroups } = this.props.editorView.runtime
+
+      this.setState({
+        cmd_groups: filterCommandGroups
+          ? filterCommandGroups.call(this.props.editorView.runtime, COMMAND_GROUPS)
+          : COMMAND_GROUPS,
+      })
+    }
+  }
+
+  render() {
+    const { wrapped, expanded, cmd_groups } = this.state
+
+    const className = cx(prefixed("editor-toolbar"), { expanded, wrapped })
+    const wrappedButton = wrapped ? (
+      <CustomButton
+        active={expanded}
+        className={prefixed("editor-toolbar-expand-button")}
+        icon={Icon.get("more_horiz")}
+        key="expand"
+        onClick={this._toggleExpansion}
+        title="More"
+        value={expanded}
+      />
+    ) : null
+    return (
+      <div className={className}>
+        <div className={prefixed("editor-toolbar-flex")}>
+          <div className={prefixed("editor-toolbar-body")}>
+            <div className={prefixed("editor-toolbar-body-content")} ref={this._onBodyRef}>
+              <i className={prefixed("editor-toolbar-wrapped-anchor")} />
+              {cmd_groups.map(this._renderButtonsGroup)}
+              <div className={prefixed("editor-toolbar-background")}>
+                <div className={prefixed("editor-toolbar-background-line")} />
+                <div className={prefixed("editor-toolbar-background-line")} />
+                <div className={prefixed("editor-toolbar-background-line")} />
+                <div className={prefixed("editor-toolbar-background-line")} />
+                <div className={prefixed("editor-toolbar-background-line")} />
+              </div>
+              <i className={prefixed("editor-toolbar-wrapped-anchor")} />
+            </div>
+            {wrappedButton}
+          </div>
+          <div className={prefixed("editor-toolbar-footer")} />
+        </div>
+      </div>
+    )
+  }
+
+  _renderButtonsGroup = (group: Object, index: number) => {
+    const buttons = Object.keys(group)
+      .map((label) => {
+        const obj = group[label]
+        if (isReactClass(obj)) {
+          // JSX requies the component to be named with upper camel case.
+          const ThatComponent = obj
+          const { editorState, editorView, dispatchTransaction } = this.props
+          return (
+            <ThatComponent
+              dispatch={dispatchTransaction}
+              editorState={editorState}
+              editorView={editorView}
+              key={label}
+            />
+          )
+        } else if (obj instanceof UICommand) {
+          return this._renderButton(label, obj)
+        } else if (Array.isArray(obj)) {
+          return this._renderMenuButton(label, obj)
+        } else {
+          return null
+        }
+      })
+      .filter(Boolean)
+
+    return (
+      <div className={prefixed("custom-buttons")} key={"g" + String(index)}>
+        {buttons}
+      </div>
+    )
+  }
+
+  _renderMenuButton = (
+    label: string,
+    commandGroups: Array<{
+      [key: string]: UICommand
+    }>
+  ) => {
+    const { editorState, editorView, disabled, dispatchTransaction } = this.props
+    const { icon, title }: any = parseLabel(label)
+
+    return (
+      <CommandMenuButton
+        commandGroups={commandGroups}
+        disabled={disabled}
+        dispatch={dispatchTransaction}
+        editorState={editorState}
+        editorView={editorView}
+        icon={icon}
+        key={label}
+        label={icon ? null : title}
+        title={title}
+      />
+    )
+  }
+
+  _renderButton = (label: string, command: UICommand) => {
+    const { disabled, editorState, editorView, dispatchTransaction } = this.props
+    const { icon, title } = parseLabel(label)
+
+    return (
+      // @ts-ignore
+      <CommandButton
+        command={command}
+        disabled={disabled}
+        dispatch={dispatchTransaction}
+        editorState={editorState}
+        editorView={editorView}
+        icon={icon}
+        key={label}
+        label={icon ? null : title}
+        title={title}
+      />
+    )
+  }
+
+  _onBodyRef = (ref: any): void => {
+    if (ref) {
+      this._body = ref
+      // Mounting
+      const el = ReactDOM.findDOMNode(ref)
+      if (el instanceof HTMLElement) {
+        ResizeObserver.observe(el, this._checkIfContentIsWrapped)
+      }
+    } else {
+      // Unmounting.
+      const el: any = this._body && ReactDOM.findDOMNode(this._body)
+      if (el instanceof HTMLElement) {
+        ResizeObserver.unobserve(el)
+      }
+      this._body = null
+    }
+  }
+
+  _checkIfContentIsWrapped = (): void => {
+    const ref = this._body
+    const el: any = ref && ReactDOM.findDOMNode(ref)
+    const startAnchor = el && el.firstChild
+    const endAnchor = el && el.lastChild
+    if (startAnchor && endAnchor) {
+      const wrapped = startAnchor.offsetTop < endAnchor.offsetTop
+      this.setState({ wrapped })
+    }
+  }
+
+  _toggleExpansion = (expanded: boolean): void => {
+    this.setState({ expanded: !expanded })
+  }
+}
+
+export default EditorToolbar
