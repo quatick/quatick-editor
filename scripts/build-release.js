@@ -10,7 +10,7 @@ const exec = (cmd) => {
 
 exec("npm run build:clean");
 
-["ui/fonts","fonts"].forEach(path => {
+["fonts"].forEach(path => {
     fs.copySync(`scss/${path}`, `dist/${path}`)
 })
 
