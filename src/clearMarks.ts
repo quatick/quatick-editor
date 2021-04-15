@@ -1,8 +1,8 @@
 import { Mark, Schema, Node } from "prosemirror-model"
 import { Transaction } from "prosemirror-state"
-import { HEADING, PARAGRAPH } from "app/core/components/Editor/src/NodeNames"
-import * as MarkNames from "app/core/components/Editor/src/MarkNames"
-import { setTextAlign } from "app/core/components/Editor/src/TextAlignCommand"
+import { HEADING, PARAGRAPH } from "@editor/NodeNames"
+import * as MarkNames from "@editor/MarkNames"
+import { setTextAlign } from "@editor/TextAlignCommand"
 
 const {
   MARK_EM,

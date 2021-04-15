@@ -1,4 +1,4 @@
-import { NodeSpec } from "app/core/components/Editor/src/Types"
+import { NodeSpec } from "@editor/Types"
 
 export const ATTRIBUTE_BOOKMARK_ID = "data-bookmark-id"
 export const ATTRIBUTE_BOOKMARK_VISIBLE = "data-bookmark-visible"

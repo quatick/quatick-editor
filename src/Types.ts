@@ -1,5 +1,5 @@
 import {EditorState} from "prosemirror-state"
-import { COMMAND_GROUPS_T } from "app/core/components/Editor/src/ui/editor/EditorToolbarConfig"
+import { COMMAND_GROUPS_T } from "@editor/ui/editor/EditorToolbarConfig"
 
 export type NodeSpec = {
     attrs?:

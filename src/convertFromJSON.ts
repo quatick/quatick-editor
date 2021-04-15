@@ -2,8 +2,8 @@ import { Schema, Node } from "prosemirror-model"
 import { EditorState } from "prosemirror-state"
 import { Plugin } from "prosemirror-state"
 
-import EditorPlugins from "app/core/components/Editor/src/EditorPlugins"
-import EditorSchema from "app/core/components/Editor/src/EditorSchema"
+import EditorPlugins from "@editor/EditorPlugins"
+import EditorSchema from "@editor/EditorSchema"
 
 export default function convertFromJSON(
     json: Object,

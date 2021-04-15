@@ -1,12 +1,12 @@
 import React from "react"
 import { EditorState, Transaction } from "prosemirror-state"
-import CommandMenuButton from "app/core/components/Editor/src/ui/command/CommandMenuButton"
-import FontTypeCommand from "app/core/components/Editor/src/FontTypeCommand"
-import { UICommands } from "app/core/components/Editor/src/ui/UICommand"
-import findActiveFontType from "app/core/components/Editor/src/ui/findActiveFontType"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import { FONT_TYPE_NAMES } from "app/core/components/Editor/src/FontTypeMarkSpec"
-import { FONT_TYPE_NAME_DEFAULT } from "app/core/components/Editor/src/ui/findActiveFontType"
+import CommandMenuButton from "@editor/ui/command/CommandMenuButton"
+import FontTypeCommand from "@editor/FontTypeCommand"
+import { UICommands } from "@editor/ui/UICommand"
+import findActiveFontType from "@editor/ui/findActiveFontType"
+import EditorView from "@editor/ui/editor/EditorView"
+import { FONT_TYPE_NAMES } from "@editor/FontTypeMarkSpec"
+import { FONT_TYPE_NAME_DEFAULT } from "@editor/ui/findActiveFontType"
 
 
 const FONT_TYPE_COMMANDS: UICommands = {

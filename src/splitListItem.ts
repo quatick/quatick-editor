@@ -6,9 +6,9 @@ import {
   ORDERED_LIST,
   BULLET_LIST,
   PARAGRAPH,
-} from "app/core/components/Editor/src/NodeNames"
+} from "@editor/NodeNames"
 import { findParentNodeOfType } from "prosemirror-utils"
-import { uuid } from "app/core/components/Editor/src/util"
+import { uuid } from "@editor/util"
 
 // Splits a list item by the current cursor"s position.
 // Some examples:

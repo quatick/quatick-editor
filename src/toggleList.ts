@@ -1,15 +1,15 @@
-import consolidateListNodes from "app/core/components/Editor/src/consolidateListNodes"
-import compareNumber from "app/core/components/Editor/src/compareNumber"
+import consolidateListNodes from "@editor/consolidateListNodes"
+import compareNumber from "@editor/compareNumber"
 import nullthrows from "nullthrows"
 import {Fragment, Node, NodeType, Schema} from "prosemirror-model"
 import {TextSelection, Transaction} from "prosemirror-state"
 import {findParentNodeOfType} from "prosemirror-utils"
 
-import {HEADING, LIST_ITEM, PARAGRAPH} from "app/core/components/Editor/src/NodeNames"
-import isListNode from "app/core/components/Editor/src/isListNode"
-import transformAndPreserveTextSelection from "app/core/components/Editor/src/transformAndPreserveTextSelection"
+import {HEADING, LIST_ITEM, PARAGRAPH} from "@editor/NodeNames"
+import isListNode from "@editor/isListNode"
+import transformAndPreserveTextSelection from "@editor/transformAndPreserveTextSelection"
 
-import {SelectionMemo} from "app/core/components/Editor/src/transformAndPreserveTextSelection"
+import {SelectionMemo} from "@editor/transformAndPreserveTextSelection"
 
 export default function toggleList(
     tr: Transaction,

@@ -1,6 +1,6 @@
 import { PT_TO_PX_RATIO } from "./convertToCSSPTValue"
-import convertToCSSPTValue from "app/core/components/Editor/src/convertToCSSPTValue"
-import toHexColor from "app/core/components/Editor/src/ui/toHexColor"
+import convertToCSSPTValue from "@editor/convertToCSSPTValue"
+import toHexColor from "@editor/ui/toHexColor"
 
 export default function patchTableElements(doc: Document): void {
   Array.from(doc.querySelectorAll("td")).forEach(patchTableCell)

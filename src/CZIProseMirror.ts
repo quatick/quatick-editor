@@ -1,6 +1,6 @@
-import convertToJSON from "app/core/components/Editor/src/convertToJSON"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import convertToJSON from "@editor/convertToJSON"
+import EditorView from "@editor/ui/editor/EditorView"
+import UICommand from "@editor/ui/UICommand"
 
 const commandsRegistery = new Map<any, any>()
 const viewsRegistery = new Map<any, any>()

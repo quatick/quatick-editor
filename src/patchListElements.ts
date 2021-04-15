@@ -1,18 +1,18 @@
-import HTMLMutator from "app/core/components/Editor/src/HTMLMutator"
+import HTMLMutator from "@editor/HTMLMutator"
 import nullthrows from "nullthrows"
-import { uuid } from "app/core/components/Editor/src/util"
+import { uuid } from "@editor/util"
 
-import { ATTRIBUTE_LIST_STYLE_TYPE } from "app/core/components/Editor/src/ListItemNodeSpec"
+import { ATTRIBUTE_LIST_STYLE_TYPE } from "@editor/ListItemNodeSpec"
 import {
   ATTRIBUTE_INDENT,
   EMPTY_CSS_VALUE,
   convertMarginLeftToIndentValue,
-} from "app/core/components/Editor/src/ParagraphNodeSpec"
+} from "@editor/ParagraphNodeSpec"
 import {
   ATTRIBUTE_COUNTER_RESET,
   ATTRIBUTE_FOLLOWING,
-} from "app/core/components/Editor/src/OrderedListNodeSpec"
-import { ATTRIBUTE_CSS_BEFORE_CONTENT } from "app/core/components/Editor/src/patchStyleElements"
+} from "@editor/OrderedListNodeSpec"
+import { ATTRIBUTE_CSS_BEFORE_CONTENT } from "@editor/patchStyleElements"
 
 export default function patchListElements(doc: Document): void {
   // In Google Doc, lists are exported as indented

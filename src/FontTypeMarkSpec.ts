@@ -1,5 +1,5 @@
 import { Node } from "prosemirror-model"
-import { MarkSpec } from "app/core/components/Editor/src/Types"
+import { MarkSpec } from "@editor/Types"
 
 // [FS] IRAD-1061 2020-09-19
 // Now loaded locally, so that it work in closed network as well.

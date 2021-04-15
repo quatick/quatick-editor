@@ -1,6 +1,6 @@
 import {Node} from "prosemirror-model"
 
-import {NodeSpec} from "app/core/components/Editor/src/Types"
+import {NodeSpec} from "@editor/Types"
 
 export const ATTRIBUTE_LIST_STYLE_TYPE = "data-list-style-type"
 

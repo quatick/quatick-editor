@@ -1,13 +1,13 @@
-import clamp from "app/core/components/Editor/src/ui/clamp"
+import clamp from "@editor/ui/clamp"
 import {
   fromHTMlElement,
   fromXY,
   isIntersected,
   Rect,
-} from "app/core/components/Editor/src/ui/rects"
+} from "@editor/ui/rects"
 
-import { prefixed } from "app/core/components/Editor/src/util"
-import { PositionHandler } from "app/core/components/Editor/src/ui/PopUpPosition"
+import { prefixed } from "@editor/util"
+import { PositionHandler } from "@editor/ui/PopUpPosition"
 
 export type PopUpDetails = {
   anchor: HTMLElement | null | undefined

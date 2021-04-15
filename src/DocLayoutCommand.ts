@@ -2,13 +2,13 @@ import { Schema } from "prosemirror-model"
 import { EditorState } from "prosemirror-state"
 import { Step } from "prosemirror-transform"
 import { Transaction } from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import SetDocAttrStep from "app/core/components/Editor/src/SetDocAttrStep"
-import DocLayoutEditor from "app/core/components/Editor/src/ui/DocLayoutEditor"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+import EditorView from "@editor/ui/editor/EditorView"
+import SetDocAttrStep from "@editor/SetDocAttrStep"
+import DocLayoutEditor from "@editor/ui/DocLayoutEditor"
+import UICommand from "@editor/ui/UICommand"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
 
-import { DocLayoutEditorValue } from "app/core/components/Editor/src/ui/DocLayoutEditor"
+import { DocLayoutEditorValue } from "@editor/ui/DocLayoutEditor"
 
 function setDocLayout(
     tr: Transaction,

@@ -1,15 +1,15 @@
 import {Fragment, Schema} from "prosemirror-model"
 import {EditorState, Transaction,TextSelection} from "prosemirror-state"
 
-import {EMBED} from "app/core/components/Editor/src/NodeNames"
-import {MARK_LINK} from "app/core/components/Editor/src/MarkNames"
-import { hideCursorPlaceholder } from "app/core/components/Editor/src/CursorPlaceholderPlugin"
-import { showSelectionPlaceholder } from "app/core/components/Editor/src/SelectionPlaceholderPlugin"
-import findNodesWithSameMark from "app/core/components/Editor/src/findNodesWithSameMark"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import EmbedURLEditor from "app/core/components/Editor/src/ui/EmbedURLEditor"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+import {EMBED} from "@editor/NodeNames"
+import {MARK_LINK} from "@editor/MarkNames"
+import { hideCursorPlaceholder } from "@editor/CursorPlaceholderPlugin"
+import { showSelectionPlaceholder } from "@editor/SelectionPlaceholderPlugin"
+import findNodesWithSameMark from "@editor/findNodesWithSameMark"
+import EditorView from "@editor/ui/editor/EditorView"
+import EmbedURLEditor from "@editor/ui/EmbedURLEditor"
+import UICommand from "@editor/ui/UICommand"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
 
 function insertEmbed(
     tr: Transaction,

@@ -1,9 +1,9 @@
-import { PopUpParams, ViewProps } from "app/core/components/Editor/src/ui/PopUp"
+import { PopUpParams, ViewProps } from "@editor/ui/PopUp"
 
-import PopUp from "app/core/components/Editor/src/ui/PopUp"
+import PopUp from "@editor/ui/PopUp"
 import React from "react"
 import ReactDOM from "react-dom"
-import { uuid, prefixed } from "app/core/components/Editor/src/util"
+import { uuid, prefixed } from "@editor/util"
 
 export type PopUpHandle = {
     close: (val: any) => void

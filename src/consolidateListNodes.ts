@@ -1,5 +1,5 @@
-import isOrderedListNode from "app/core/components/Editor/src/isOrderedListNode"
-import isListNode from "app/core/components/Editor/src/isListNode"
+import isOrderedListNode from "@editor/isOrderedListNode"
+import isListNode from "@editor/isListNode"
 import { Fragment } from "prosemirror-model"
 import { Node } from "prosemirror-model"
 import { Transaction } from "prosemirror-state"

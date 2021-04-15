@@ -1,9 +1,9 @@
 import React from "react"
 import { EditorView } from "prosemirror-view"
 import scrollIntoView from "smooth-scroll-into-view-if-needed"
-import { sanitizeURL } from "app/core/components/Editor/src/URLs"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import { prefixed } from "app/core/components/Editor/src/util"
+import { sanitizeURL } from "@editor/URLs"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import { prefixed } from "@editor/util"
 
 function isBookMarkHref(href: string): boolean {
     return !!href && href.indexOf("#") === 0 && href.length >= 2

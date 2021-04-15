@@ -1,10 +1,10 @@
 import {Node} from "prosemirror-model"
 
-import {ATTRIBUTE_LIST_STYLE_TYPE} from "app/core/components/Editor/src/ListItemNodeSpec"
-import {LIST_ITEM} from "app/core/components/Editor/src/NodeNames"
-import {ATTRIBUTE_INDENT, MIN_INDENT_LEVEL} from "app/core/components/Editor/src/ParagraphNodeSpec"
-import {prefixed} from "app/core/components/Editor/src/util"
-import {NodeSpec} from "app/core/components/Editor/src/Types"
+import {ATTRIBUTE_LIST_STYLE_TYPE} from "@editor/ListItemNodeSpec"
+import {LIST_ITEM} from "@editor/NodeNames"
+import {ATTRIBUTE_INDENT, MIN_INDENT_LEVEL} from "@editor/ParagraphNodeSpec"
+import {prefixed} from "@editor/util"
+import {NodeSpec} from "@editor/Types"
 
 export const ATTRIBUTE_COUNTER_RESET = "data-counter-reset"
 export const ATTRIBUTE_FOLLOWING = "data-following"

@@ -7,7 +7,7 @@ import {
     LEFT_ARROW,
     RIGHT_ARROW,
     UP_ARROW,
-} from "app/core/components/Editor/src/ui/KeyCodes"
+} from "@editor/ui/KeyCodes"
 
 const AtomicNodeKeyCodes = new Set([
     BACKSPACE,

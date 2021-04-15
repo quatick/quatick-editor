@@ -1,4 +1,4 @@
-import { NodeSpec } from "app/core/components/Editor/src/Types"
+import { NodeSpec } from "@editor/Types"
 
 // eslint-disable-next-line no-useless-escape
 const CSS_ROTATE_PATTERN = /rotate\(([0-9\.]+)rad\)/i

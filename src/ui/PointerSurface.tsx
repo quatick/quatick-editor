@@ -1,7 +1,7 @@
 import cx from "classnames"
 import * as React from "react"
 
-import preventEventDefault from "app/core/components/Editor/src/ui/preventEventDefault"
+import preventEventDefault from "@editor/ui/preventEventDefault"
 
 export type PointerSurfaceProps = {
   active?: boolean | null | undefined

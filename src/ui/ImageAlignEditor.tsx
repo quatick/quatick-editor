@@ -1,7 +1,7 @@
-import CustomButton from './CustomButton'
-import React from 'react'
+import React from "react"
+import CustomButton from "@editor/ui/custom/CustomButton"
 
-import {prefixed} from '../util'
+import { prefixed } from "@editor/util"
 
 const ImageAlignValues = {
     NONE: {

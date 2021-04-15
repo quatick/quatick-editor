@@ -1,8 +1,8 @@
 import { EditorState, Transaction } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 
-import splitListItem from "app/core/components/Editor/src/splitListItem"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import splitListItem from "@editor/splitListItem"
+import UICommand from "@editor/ui/UICommand"
 
 class ListSplitCommand extends UICommand {
   execute = (

@@ -5,20 +5,20 @@ import {NodeSelection} from "prosemirror-state"
 import React from "react"
 import ReactDOM from "react-dom"
 
-import CustomNodeView from "app/core/components/Editor/src/ui/custom/CustomNodeView"
-import Icon from "app/core/components/Editor/src/ui/Icon"
-import ImageInlineEditor from "app/core/components/Editor/src/ui/ImageInlineEditor"
-import ImageResizeBox from "app/core/components/Editor/src/ui/ImageResizeBox"
-import {MIN_SIZE} from "app/core/components/Editor/src/ui/ImageResizeBox"
-import {atAnchorBottomCenter} from "app/core/components/Editor/src/ui/PopUpPosition"
-import ResizeObserver from "app/core/components/Editor/src/ui/ResizeObserver"
-import createPopUp from "app/core/components/Editor/src/ui/createPopUp"
-import resolveImage from "app/core/components/Editor/src/ui/resolveImage"
-import {uuid, prefixed} from "app/core/components/Editor/src/util"
+import CustomNodeView from "@editor/ui/custom/CustomNodeView"
+import Icon from "@editor/ui/Icon"
+import ImageInlineEditor from "@editor/ui/ImageInlineEditor"
+import ImageResizeBox from "@editor/ui/ImageResizeBox"
+import {MIN_SIZE} from "@editor/ui/ImageResizeBox"
+import {atAnchorBottomCenter} from "@editor/ui/PopUpPosition"
+import ResizeObserver from "@editor/ui/ResizeObserver"
+import createPopUp from "@editor/ui/createPopUp"
+import resolveImage from "@editor/ui/resolveImage"
+import {uuid, prefixed} from "@editor/util"
 
-import {EditorRuntime} from "app/core/components/Editor/src/Types"
-import {NodeViewProps} from "app/core/components/Editor/src/ui/custom/CustomNodeView"
-import {ResizeObserverEntry} from "app/core/components/Editor/src/ui/ResizeObserver"
+import {EditorRuntime} from "@editor/Types"
+import {NodeViewProps} from "@editor/ui/custom/CustomNodeView"
+import {ResizeObserverEntry} from "@editor/ui/ResizeObserver"
 
 const EMPTY_SRC =
     "data:image/gif;base64," +
@@ -354,7 +354,7 @@ class ImageViewBody extends React.Component<NodeViewProps, any> {
             }
         } else {
             // Unmounting.
-            const el: HTMLElement | null = this._body && ReactDOM.findDOMNode(this._body)
+            const el: any = this._body && ReactDOM.findDOMNode(this._body)
             if (el) {
                 ResizeObserver.unobserve(el)
             }

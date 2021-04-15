@@ -1,7 +1,7 @@
 import React from "react"
 import cx from "classnames"
-import { prefixed } from "app/core/components/Editor/src/util"
-import { useOnClickOutside } from "app/core/components/Editor/src/hooks/click-outside"
+import { prefixed } from "@editor/util"
+import { useOnClickOutside } from "@editor/hooks/click-outside"
 
 export interface EditorFramesetProps {
     body?: React.ReactElement<any> | null

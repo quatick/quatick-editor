@@ -1,16 +1,16 @@
 import {EditorState, Transaction} from "prosemirror-state"
 import {TextSelection} from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import {MARK_LINK} from "app/core/components/Editor/src/MarkNames"
+import EditorView from "@editor/ui/editor/EditorView"
+import {MARK_LINK} from "@editor/MarkNames"
 import {
     hideSelectionPlaceholder,
     showSelectionPlaceholder,
-} from "app/core/components/Editor/src/SelectionPlaceholderPlugin"
-import applyMark from "app/core/components/Editor/src/applyMark"
+} from "@editor/SelectionPlaceholderPlugin"
+import applyMark from "@editor/applyMark"
 import findNodesWithSameMark from "./findNodesWithSameMark"
-import LinkURLEditor from "app/core/components/Editor/src/ui/LinkURLEditor"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+import LinkURLEditor from "@editor/ui/LinkURLEditor"
+import UICommand from "@editor/ui/UICommand"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
 
 class LinkSetURLCommand extends UICommand {
     _popUp: PopUpHandle | null = null

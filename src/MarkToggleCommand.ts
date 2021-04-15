@@ -2,8 +2,8 @@ import { toggleMark } from "prosemirror-commands"
 import { EditorState, Transaction, TextSelection } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 
-import findNodesWithSameMark from "app/core/components/Editor/src/findNodesWithSameMark"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import findNodesWithSameMark from "@editor/findNodesWithSameMark"
+import UICommand from "@editor/ui/UICommand"
 
 class MarkToggleCommand extends UICommand {
     _markName: string

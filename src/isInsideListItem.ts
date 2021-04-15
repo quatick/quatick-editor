@@ -1,6 +1,6 @@
 import { Node } from "prosemirror-model"
 
-import { LIST_ITEM } from "app/core/components/Editor/src/NodeNames"
+import { LIST_ITEM } from "@editor/NodeNames"
 
 export default function isInsideListItem(doc: Node, pos: number): boolean {
     if (doc.nodeSize < 2 || pos < 2) {

@@ -1,11 +1,11 @@
 import React from "react"
 import { EditorState } from "prosemirror-state"
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import CommandMenuButton from "app/core/components/Editor/src/ui/command/CommandMenuButton"
-import { TABLE_COMMANDS_GROUP } from "app/core/components/Editor/src/ui/editor/EditorToolbarConfig"
-import {prefixed} from "app/core/components/Editor/src/util"
-import Icon from "app/core/components/Editor/src/ui/Icon"
+import EditorView from "@editor/ui/editor/EditorView"
+import CommandMenuButton from "@editor/ui/command/CommandMenuButton"
+import { TABLE_COMMANDS_GROUP } from "@editor/ui/editor/EditorToolbarConfig"
+import {prefixed} from "@editor/util"
+import Icon from "@editor/ui/Icon"
 
 type Props = {
     editorState: EditorState

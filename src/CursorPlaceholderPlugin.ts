@@ -1,6 +1,6 @@
 import { EditorState, Plugin, Transaction, PluginKey } from "prosemirror-state"
 import { Decoration, DecorationSet } from "prosemirror-view"
-import { prefixed } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
 
 const PLACE_HOLDER_ID = {name: "CursorPlaceholderPlugin"}
 let singletonInstance: CursorPlaceholderPlugin | null = null

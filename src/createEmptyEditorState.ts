@@ -2,7 +2,7 @@ import {Schema} from "prosemirror-model"
 import {EditorState} from "prosemirror-state"
 import {Plugin} from "prosemirror-state"
 
-import convertFromJSON from "app/core/components/Editor/src/convertFromJSON"
+import convertFromJSON from "@editor/convertFromJSON"
 
 export const EMPTY_DOC_JSON = {
     type: "doc",

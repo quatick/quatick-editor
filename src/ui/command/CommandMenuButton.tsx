@@ -2,12 +2,12 @@ import cx from "classnames"
 import {EditorState, Transaction} from "prosemirror-state"
 import React from "react"
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import CommandMenu from "app/core/components/Editor/src/ui/command/CommandMenu"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
-import { prefixed,uuid } from "app/core/components/Editor/src/util"
+import EditorView from "@editor/ui/editor/EditorView"
+import CommandMenu from "@editor/ui/command/CommandMenu"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import UICommand from "@editor/ui/UICommand"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
+import { prefixed,uuid } from "@editor/util"
 
 interface CommandGroup {
     // TODO: change the any

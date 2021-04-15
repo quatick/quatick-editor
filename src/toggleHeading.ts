@@ -1,11 +1,11 @@
 import { Schema } from "prosemirror-model"
 import { Transaction } from "prosemirror-state"
-import { BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH } from "app/core/components/Editor/src/NodeNames"
-import compareNumber from "app/core/components/Editor/src/compareNumber"
-import isInsideListItem from "app/core/components/Editor/src/isInsideListItem"
-import isListNode from "app/core/components/Editor/src/isListNode"
-import { clearMarks } from "app/core/components/Editor/src/clearMarks"
-import { unwrapNodesFromList } from "app/core/components/Editor/src/toggleList"
+import { BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH } from "@editor/NodeNames"
+import compareNumber from "@editor/compareNumber"
+import isInsideListItem from "@editor/isInsideListItem"
+import isListNode from "@editor/isListNode"
+import { clearMarks } from "@editor/clearMarks"
+import { unwrapNodesFromList } from "@editor/toggleList"
 
 export default function toggleHeading(
     tr: Transaction,

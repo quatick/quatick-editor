@@ -2,8 +2,8 @@ import { Fragment, Schema } from "prosemirror-model"
 import { Transaction, EditorState } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 
-import { HORIZONTAL_RULE } from "app/core/components/Editor/src/NodeNames"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import { HORIZONTAL_RULE } from "@editor/NodeNames"
+import UICommand from "@editor/ui/UICommand"
 
 function insertHorizontalRule(tr: Transaction, schema: Schema): Transaction {
     // @ts-ignore

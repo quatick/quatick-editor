@@ -1,6 +1,6 @@
 import * as url from "url"
 
-import isOffline from "app/core/components/Editor/src/ui/isOffline"
+import isOffline from "@editor/ui/isOffline"
 
 export type ImageResult = {
     complete: boolean

@@ -1,6 +1,6 @@
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import UICommand from "@editor/ui/UICommand"
 import { AllSelection, TextSelection } from "prosemirror-state"
-import { BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH } from "app/core/components/Editor/src/NodeNames"
+import { BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH } from "@editor/NodeNames"
 import { EditorState } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 import { Schema } from "prosemirror-model"
@@ -10,7 +10,7 @@ import {
     SINGLE_LINE_SPACING,
     LINE_SPACING_115,
     LINE_SPACING_150,
-} from "app/core/components/Editor/src/ui/toCSSLineSpacing"
+} from "@editor/ui/toCSSLineSpacing"
 
 export function setTextLineSpacing(
     tr: Transaction,

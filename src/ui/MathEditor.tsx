@@ -1,8 +1,8 @@
 import React from "react"
-import { Mathfield } from "app/core/components/Editor/src/ui/MathField"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import preventEventDefault from "app/core/components/Editor/src/ui/preventEventDefault"
-import { uuid, prefixed } from "app/core/components/Editor/src/util"
+import { Mathfield } from "@editor/ui/MathField"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import preventEventDefault from "@editor/ui/preventEventDefault"
+import { uuid, prefixed } from "@editor/util"
 
 type Props = {
     initialValue: string | null | undefined

@@ -5,7 +5,7 @@ import ReactDOM from "react-dom"
 import clamp from "./clamp"
 import htmlElementToRect from "./htmlElementToRect"
 import { fromHTMlElement, fromXY, isIntersected } from "./rects"
-import { prefixed } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
 
 export type TableGridSizeEditorValue = {
     cols: number

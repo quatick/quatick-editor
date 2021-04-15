@@ -1,9 +1,9 @@
 import React from "react"
-import { convertToEmbedURL } from "app/core/components/Editor/src/URLs"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import { ENTER } from "app/core/components/Editor/src/ui/KeyCodes"
+import { convertToEmbedURL } from "@editor/URLs"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import { ENTER } from "@editor/ui/KeyCodes"
 import preventEventDefault from "./preventEventDefault"
-import { prefixed } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
 const BAD_CHARACTER_PATTER = /\s/
 
 type Props = {

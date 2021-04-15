@@ -1,10 +1,10 @@
 import {EditorState, Transaction} from "prosemirror-state"
 import React from "react"
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import FontSizeCommand from "app/core/components/Editor/src/FontSizeCommand"
-import CommandMenuButton from "app/core/components/Editor/src/ui/command/CommandMenuButton"
-import findActiveFontSize from "app/core/components/Editor/src/ui/findActiveFontSize"
+import EditorView from "@editor/ui/editor/EditorView"
+import FontSizeCommand from "@editor/FontSizeCommand"
+import CommandMenuButton from "@editor/ui/command/CommandMenuButton"
+import findActiveFontSize from "@editor/ui/findActiveFontSize"
 
 export const FONT_PT_SIZES = [
     8,

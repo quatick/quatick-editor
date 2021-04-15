@@ -3,8 +3,8 @@ import ReactDOM from "react-dom"
 import { Node } from "prosemirror-model"
 import { Decoration } from "prosemirror-view"
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import SelectionObserver from "app/core/components/Editor/src/ui/SelectionObserver"
+import EditorView from "@editor/ui/editor/EditorView"
+import SelectionObserver from "@editor/ui/SelectionObserver"
 
 export type NodeViewProps = {
     editorView: EditorView

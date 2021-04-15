@@ -1,17 +1,17 @@
 import { Class } from "utility-types"
 import { Fragment, Schema } from "prosemirror-model"
 import { EditorState, TextSelection, Transaction } from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import EditorView from "@editor/ui/editor/EditorView"
 import React from "react"
 import {
     hideCursorPlaceholder,
     showCursorPlaceholder,
-} from "app/core/components/Editor/src/CursorPlaceholderPlugin"
-import { IMAGE } from "app/core/components/Editor/src/NodeNames"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+} from "@editor/CursorPlaceholderPlugin"
+import { IMAGE } from "@editor/NodeNames"
+import UICommand from "@editor/ui/UICommand"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
 
-import { ImageLike } from "app/core/components/Editor/src/Types"
+import { ImageLike } from "@editor/Types"
 
 type InsertImageProps = {
     tr: Transaction

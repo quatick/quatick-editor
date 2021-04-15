@@ -1,11 +1,11 @@
 import React from "react"
 import * as PropTypes from "prop-types"
 
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import preventEventDefault from "app/core/components/Editor/src/ui/preventEventDefault"
-import resolveImage from "app/core/components/Editor/src/ui/resolveImage"
-import { prefixed } from "app/core/components/Editor/src/util"
-import { ImageLike } from "app/core/components/Editor/src/Types"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import preventEventDefault from "@editor/ui/preventEventDefault"
+import resolveImage from "@editor/ui/resolveImage"
+import { prefixed } from "@editor/util"
+import { ImageLike } from "@editor/Types"
 
 type Props = {
   // eslint-disable-line no-unused-vars

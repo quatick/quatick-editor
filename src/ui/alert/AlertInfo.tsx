@@ -1,5 +1,5 @@
 import React from "react"
-import { ImageLike } from "app/core/components/Editor/src/Types"
+import { ImageLike } from "@editor/Types"
 
 interface Props {
     initialValue: any

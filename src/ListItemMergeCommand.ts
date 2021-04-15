@@ -5,9 +5,9 @@ import {TextSelection} from "prosemirror-state"
 import {findParentNodeOfType} from "prosemirror-utils"
 import {EditorView} from "prosemirror-view"
 
-import {HEADING, LIST_ITEM, PARAGRAPH} from "app/core/components/Editor/src/NodeNames"
-import nodeAt from "app/core/components/Editor/src/nodeAt"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import {HEADING, LIST_ITEM, PARAGRAPH} from "@editor/NodeNames"
+import nodeAt from "@editor/nodeAt"
+import UICommand from "@editor/ui/UICommand"
 
 function mergeListItemUp(tr: Transaction, schema: Schema): Transaction {
     // This merge a list item to is previous list item of the selection is at the

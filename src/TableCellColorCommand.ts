@@ -2,7 +2,7 @@ import nullthrows from 'nullthrows'
 import {EditorState, Transaction} from 'prosemirror-state'
 import {setCellAttr} from 'prosemirror-tables'
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import EditorView from "@editor/ui/editor/EditorView"
 import ColorEditor from './ui/ColorEditor'
 import {atAnchorRight} from './ui/PopUpPosition'
 import UICommand from './ui/UICommand'

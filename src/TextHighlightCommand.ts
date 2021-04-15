@@ -1,14 +1,14 @@
 import nullthrows from "nullthrows"
 import {EditorState} from "prosemirror-state"
 
-import ColorEditor from "app/core/components/Editor/src/ui/ColorEditor"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import applyMark from "app/core/components/Editor/src/applyMark"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
-import findNodesWithSameMark from "app/core/components/Editor/src/findNodesWithSameMark"
-import isTextStyleMarkCommandEnabled from "app/core/components/Editor/src/isTextStyleMarkCommandEnabled"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import {MARK_TEXT_HIGHLIGHT} from "app/core/components/Editor/src/MarkNames"
+import ColorEditor from "@editor/ui/ColorEditor"
+import UICommand from "@editor/ui/UICommand"
+import applyMark from "@editor/applyMark"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
+import findNodesWithSameMark from "@editor/findNodesWithSameMark"
+import isTextStyleMarkCommandEnabled from "@editor/isTextStyleMarkCommandEnabled"
+import EditorView from "@editor/ui/editor/EditorView"
+import {MARK_TEXT_HIGHLIGHT} from "@editor/MarkNames"
 import {Transaction} from "prosemirror-state"
 
 class TextHighlightCommand extends UICommand {

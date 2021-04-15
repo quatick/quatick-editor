@@ -2,8 +2,8 @@ import {EditorState, Transaction} from "prosemirror-state"
 import {EditorView} from "prosemirror-view"
 import React from "react"
 
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import UICommand from "@editor/ui/UICommand"
 
 interface Props {
     className?: string

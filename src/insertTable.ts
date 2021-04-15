@@ -1,7 +1,7 @@
 import {Fragment, Schema} from "prosemirror-model"
 import {TextSelection, Transaction} from "prosemirror-state"
 
-import {PARAGRAPH, TABLE, TABLE_CELL, TABLE_ROW} from "app/core/components/Editor/src/NodeNames"
+import {PARAGRAPH, TABLE, TABLE_CELL, TABLE_ROW} from "@editor/NodeNames"
 
 // const ZERO_WIDTH_SPACE_CHAR = "\u200b";
 

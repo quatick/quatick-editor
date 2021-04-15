@@ -1,9 +1,9 @@
 import React from "react"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import MathEditor from "app/core/components/Editor/src/ui/MathEditor"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
-import { prefixed } from "app/core/components/Editor/src/util"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import EditorView from "@editor/ui/editor/EditorView"
+import MathEditor from "@editor/ui/MathEditor"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
+import { prefixed } from "@editor/util"
 
 const MathAlignValues = {
     NONE: {

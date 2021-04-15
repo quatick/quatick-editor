@@ -1,19 +1,19 @@
 import { EditorState, Plugin, PluginKey } from "prosemirror-state"
 import { TextSelection } from "prosemirror-state"
 
-import { MARK_LINK } from "app/core/components/Editor/src/MarkNames"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import { MARK_LINK } from "@editor/MarkNames"
+import EditorView from "@editor/ui/editor/EditorView"
 import {
     hideSelectionPlaceholder,
     showSelectionPlaceholder,
-} from "app/core/components/Editor/src/SelectionPlaceholderPlugin"
-import applyMark from "app/core/components/Editor/src/applyMark"
-import findNodesWithSameMark from "app/core/components/Editor/src/findNodesWithSameMark"
-import lookUpElement from "app/core/components/Editor/src/lookUpElement"
-import LinkTooltip from "app/core/components/Editor/src/ui/LinkTooltip"
-import LinkURLEditor from "app/core/components/Editor/src/ui/LinkURLEditor"
-import { atAnchorTopCenter } from "app/core/components/Editor/src/ui/PopUpPosition"
-import createPopUp from "app/core/components/Editor/src/ui/createPopUp"
+} from "@editor/SelectionPlaceholderPlugin"
+import applyMark from "@editor/applyMark"
+import findNodesWithSameMark from "@editor/findNodesWithSameMark"
+import lookUpElement from "@editor/lookUpElement"
+import LinkTooltip from "@editor/ui/LinkTooltip"
+import LinkURLEditor from "@editor/ui/LinkURLEditor"
+import { atAnchorTopCenter } from "@editor/ui/PopUpPosition"
+import createPopUp from "@editor/ui/createPopUp"
 
 // https://prosemirror.net/examples/tooltip/
 const SPEC = {

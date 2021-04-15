@@ -2,10 +2,10 @@ import { Schema } from "prosemirror-model"
 import { Transaction } from "prosemirror-state"
 
 import { BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH } from "./NodeNames"
-import compareNumber from "app/core/components/Editor/src/compareNumber"
-import isInsideListItem from "app/core/components/Editor/src/isInsideListItem"
-import isListNode from "app/core/components/Editor/src/isListNode"
-import { unwrapNodesFromList } from "app/core/components/Editor/src/toggleList"
+import compareNumber from "@editor/compareNumber"
+import isInsideListItem from "@editor/isInsideListItem"
+import isListNode from "@editor/isListNode"
+import { unwrapNodesFromList } from "@editor/toggleList"
 
 export default function toggleBlockquote(
     tr: Transaction,

@@ -1,9 +1,9 @@
 import React from "react"
 import Color from "color"
 
-import {prefixed} from "app/core/components/Editor/src/util"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import clamp from "app/core/components/Editor/src/ui/clamp"
+import {prefixed} from "@editor/util"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import clamp from "@editor/ui/clamp"
 
 function generateGreyColors(count: number): Array<Color> {
     let cc = 255

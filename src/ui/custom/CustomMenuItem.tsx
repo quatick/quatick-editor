@@ -1,6 +1,6 @@
 import React from "react"
-import CustomButton from "app/core/components/Editor/src/ui/custom/CustomButton"
-import { prefixed } from "app/core/components/Editor/src/util"
+import CustomButton from "@editor/ui/custom/CustomButton"
+import { prefixed } from "@editor/util"
 
 class CustomMenuItemSeparator extends React.Component<any, any> {
     render() {

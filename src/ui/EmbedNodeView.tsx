@@ -1,14 +1,14 @@
-import CustomNodeView from "app/core/components/Editor/src/ui/custom/CustomNodeView"
+import CustomNodeView from "@editor/ui/custom/CustomNodeView"
 import React from "react"
-import createPopUp from "app/core/components/Editor/src/ui/createPopUp"
+import createPopUp from "@editor/ui/createPopUp"
 import cx from "classnames"
 import {Decoration} from "prosemirror-view"
 import {Node} from "prosemirror-model"
-import {atViewportCenter} from "app/core/components/Editor/src/ui/PopUpPosition"
-import { uuid } from "app/core/components/Editor/src/util"
-import {NodeViewProps} from "app/core/components/Editor/src/ui/custom/CustomNodeView"
-import {prefixed} from "app/core/components/Editor/src/util"
-import EmbedURLEditor from "app/core/components/Editor/src/ui/EmbedURLEditor"
+import {atViewportCenter} from "@editor/ui/PopUpPosition"
+import { uuid } from "@editor/util"
+import {NodeViewProps} from "@editor/ui/custom/CustomNodeView"
+import {prefixed} from "@editor/util"
+import EmbedURLEditor from "@editor/ui/EmbedURLEditor"
 
 class EmbedViewBody extends React.Component<NodeViewProps, any> {
 

@@ -1,10 +1,10 @@
-import clamp from "app/core/components/Editor/src/ui/clamp"
-import convertToCSSPTValue from "app/core/components/Editor/src/convertToCSSPTValue"
-import toCSSLineSpacing from "app/core/components/Editor/src/ui/toCSSLineSpacing"
+import clamp from "@editor/ui/clamp"
+import convertToCSSPTValue from "@editor/convertToCSSPTValue"
+import toCSSLineSpacing from "@editor/ui/toCSSLineSpacing"
 import {Node} from "prosemirror-model"
 
-import {NodeSpec} from "app/core/components/Editor/src/Types"
-import {prefixed} from "app/core/components/Editor/src/util"
+import {NodeSpec} from "@editor/Types"
+import {prefixed} from "@editor/util"
 // This assumes that every 36pt maps to one indent level.
 export const INDENT_MARGIN_PT_SIZE = 36
 export const MIN_INDENT_LEVEL = 0

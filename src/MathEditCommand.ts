@@ -1,14 +1,14 @@
 import {Fragment, Schema} from "prosemirror-model"
 import {EditorState, Transaction} from "prosemirror-state"
 import {TextSelection, NodeSelection} from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import EditorView from "@editor/ui/editor/EditorView"
 
 import {
     hideCursorPlaceholder,
     showCursorPlaceholder,
-} from "app/core/components/Editor/src/CursorPlaceholderPlugin"
-import {MATH} from "app/core/components/Editor/src/NodeNames"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+} from "@editor/CursorPlaceholderPlugin"
+import {MATH} from "@editor/NodeNames"
+import UICommand from "@editor/ui/UICommand"
 
 function insertMath(
     tr: Transaction,

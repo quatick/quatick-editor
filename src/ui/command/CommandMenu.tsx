@@ -2,9 +2,9 @@ import React from "react"
 import { EditorState, Transaction } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 
-import CustomMenu from "app/core/components/Editor/src/ui/custom/CustomMenu"
-import CustomMenuItem from "app/core/components/Editor/src/ui/custom/CustomMenuItem"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import CustomMenu from "@editor/ui/custom/CustomMenu"
+import CustomMenuItem from "@editor/ui/custom/CustomMenuItem"
+import UICommand from "@editor/ui/UICommand"
 
 class CommandMenu extends React.Component<any, any> {
     _activeCommand: UICommand | null | undefined = null

@@ -1,11 +1,11 @@
 import {EditorState, Plugin, PluginKey} from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import findActionableCell from "app/core/components/Editor/src/findActionableCell"
-import {atAnchorTopRight} from "app/core/components/Editor/src/ui/PopUpPosition"
-import TableCellMenu from "app/core/components/Editor/src/ui/TableCellMenu"
-import bindScrollHandler from "app/core/components/Editor/src/ui/bindScrollHandler"
-import createPopUp, { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
-import isElementFullyVisible from "app/core/components/Editor/src/ui/isElementFullyVisible"
+import EditorView from "@editor/ui/editor/EditorView"
+import findActionableCell from "@editor/findActionableCell"
+import {atAnchorTopRight} from "@editor/ui/PopUpPosition"
+import TableCellMenu from "@editor/ui/TableCellMenu"
+import bindScrollHandler from "@editor/ui/bindScrollHandler"
+import createPopUp, { PopUpHandle } from "@editor/ui/createPopUp"
+import isElementFullyVisible from "@editor/ui/isElementFullyVisible"
 
 class TableCellTooltipView {
     _cellElement: null | Node

@@ -1,6 +1,6 @@
 import nullthrows from "nullthrows"
 import { EditorState, TextSelection, Transaction } from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import EditorView from "@editor/ui/editor/EditorView"
 import insertTable from "./insertTable"
 import { atAnchorRight } from "./ui/PopUpPosition"
 import TableGridSizeEditor from "./ui/TableGridSizeEditor"

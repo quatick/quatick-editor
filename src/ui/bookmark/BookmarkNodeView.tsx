@@ -1,15 +1,15 @@
 import React from "react"
 import { Node } from "prosemirror-model"
 import { Decoration } from "prosemirror-view"
-import { prefixed } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
 import {
     ATTRIBUTE_BOOKMARK_ID,
     ATTRIBUTE_BOOKMARK_VISIBLE,
-} from "app/core/components/Editor/src/ui/bookmark/BookmarkNodeSpec"
-import CustomNodeView from "app/core/components/Editor/src/ui/custom/CustomNodeView"
-import Icon from "app/core/components/Editor/src/ui/Icon"
+} from "@editor/ui/bookmark/BookmarkNodeSpec"
+import CustomNodeView from "@editor/ui/custom/CustomNodeView"
+import Icon from "@editor/ui/Icon"
 
-import { NodeViewProps } from "app/core/components/Editor/src/ui/custom/CustomNodeView"
+import { NodeViewProps } from "@editor/ui/custom/CustomNodeView"
 
 class BookmarkViewBody extends React.Component<any, any> {
     props: NodeViewProps

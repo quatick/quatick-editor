@@ -2,9 +2,9 @@ import React from "react"
 import cx from "classnames"
 import nullthrows from "nullthrows"
 
-import { prefixed } from "app/core/components/Editor/src/util"
-import clamp from "app/core/components/Editor/src/ui/clamp"
-import { uuid } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
+import clamp from "@editor/ui/clamp"
+import { uuid } from "@editor/util"
 
 type Props = {
     height: number

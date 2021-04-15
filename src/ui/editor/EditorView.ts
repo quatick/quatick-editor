@@ -1,7 +1,7 @@
 import React from "react"
 import { EditorView } from "prosemirror-view"
 import { getParentFrameSet } from "./EditorFrameset"
-import { DirectEditorProps, EditorRuntime } from "app/core/components/Editor/src/Types"
+import { DirectEditorProps, EditorRuntime } from "@editor/Types"
 
 // https://github.com/ProseMirror/prosemirror-view/blob/master/src/index.js
 class PWEditorView extends EditorView {

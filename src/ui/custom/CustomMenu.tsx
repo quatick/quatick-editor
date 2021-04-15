@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { prefixed } from "app/core/components/Editor/src/util"
+import { prefixed } from "@editor/util"
 
 class CustomMenu extends React.Component<any, any> {
     render() {

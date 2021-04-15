@@ -2,16 +2,16 @@ import React from "react"
 import { EditorState, Transaction } from "prosemirror-state"
 import cx from "classnames"
 
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
-import createEmptyEditorState from "app/core/components/Editor/src/createEmptyEditorState"
-import EditingArea from "app/core/components/Editor/src/ui/EditingArea"
-import { EditorFrameset } from "app/core/components/Editor/src/ui/editor/EditorFrameset"
-import EditorToolbar from "app/core/components/Editor/src/ui/editor/EditorToolbar"
-import Frag from "app/core/components/Editor/src/ui/Frag"
-import { uuid } from "app/core/components/Editor/src/util"
+import EditorView from "@editor/ui/editor/EditorView"
+import createEmptyEditorState from "@editor/createEmptyEditorState"
+import EditingArea from "@editor/ui/EditingArea"
+import { EditorFrameset } from "@editor/ui/editor/EditorFrameset"
+import EditorToolbar from "@editor/ui/editor/EditorToolbar"
+import Frag from "@editor/ui/Frag"
+import { uuid } from "@editor/util"
 
-import { EditorFramesetProps } from "app/core/components/Editor/src/ui/editor/EditorFrameset"
-import { EditorProps } from "app/core/components/Editor/src/ui/EditingArea"
+import { EditorFramesetProps } from "@editor/ui/editor/EditorFrameset"
+import { EditorProps } from "@editor/ui/EditingArea"
 
 type Props = EditorFramesetProps & EditorProps & {
     children?: any | null | undefined

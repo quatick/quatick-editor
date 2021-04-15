@@ -1,7 +1,7 @@
 import {
     ATTRIBUTE_BOOKMARK_ID,
     ATTRIBUTE_BOOKMARK_VISIBLE,
-} from "app/core/components/Editor/src/ui/bookmark/BookmarkNodeSpec"
+} from "@editor/ui/bookmark/BookmarkNodeSpec"
 
 const BLOCK_NODE_NAME_PATTERN = /(P|H1|H2|H3|H4|H5|H6)/
 

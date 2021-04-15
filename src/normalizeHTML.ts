@@ -2,16 +2,16 @@ import {
   DOM_ATTRIBUTE_SIZE,
   HAIR_SPACE_CHAR,
   SPACER_SIZE_TAB,
-} from "app/core/components/Editor/src/SpacerMarkSpec"
-import patchAnchorElements from "app/core/components/Editor/src/patchAnchorElements"
-import patchBreakElements from "app/core/components/Editor/src/patchBreakElements"
-import patchElementInlineStyles from "app/core/components/Editor/src/patchElementInlineStyles"
-import patchListElements from "app/core/components/Editor/src/patchListElements"
-import patchMathElements from "app/core/components/Editor/src/patchMathElements"
-import patchParagraphElements from "app/core/components/Editor/src/patchParagraphElements"
-import patchStyleElements from "app/core/components/Editor/src/patchStyleElements"
-import patchTableElements from "app/core/components/Editor/src/patchTableElements"
-import toSafeHTMLDocument from "app/core/components/Editor/src/toSafeHTMLDocument"
+} from "@editor/SpacerMarkSpec"
+import patchAnchorElements from "@editor/patchAnchorElements"
+import patchBreakElements from "@editor/patchBreakElements"
+import patchElementInlineStyles from "@editor/patchElementInlineStyles"
+import patchListElements from "@editor/patchListElements"
+import patchMathElements from "@editor/patchMathElements"
+import patchParagraphElements from "@editor/patchParagraphElements"
+import patchStyleElements from "@editor/patchStyleElements"
+import patchTableElements from "@editor/patchTableElements"
+import toSafeHTMLDocument from "@editor/toSafeHTMLDocument"
 
 const HTML_BODY_PATTERN = /<body[\s>]/i
 const LONG_UNDERLINE_PATTERN = /_+/g

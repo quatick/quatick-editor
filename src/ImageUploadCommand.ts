@@ -2,10 +2,10 @@ import React from "react"
 import { Class } from "utility-types"
 
 import { EditorState } from "prosemirror-state"
-import EditorView from "app/core/components/Editor/src/ui/editor/EditorView"
+import EditorView from "@editor/ui/editor/EditorView"
 
-import ImageSourceCommand from "app/core/components/Editor/src/ImageSourceCommand"
-import ImageUploadEditor from "app/core/components/Editor/src/ui/ImageUploadEditor"
+import ImageSourceCommand from "@editor/ImageSourceCommand"
+import ImageUploadEditor from "@editor/ui/ImageUploadEditor"
 
 class ImageUploadCommand extends ImageSourceCommand {
     isEnabled = (

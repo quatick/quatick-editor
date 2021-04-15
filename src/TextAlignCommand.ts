@@ -3,8 +3,8 @@ import {AllSelection, EditorState, TextSelection} from "prosemirror-state"
 import {Transaction} from "prosemirror-state"
 import {EditorView} from "prosemirror-view"
 
-import {BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH} from "app/core/components/Editor/src/NodeNames"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import {BLOCKQUOTE, HEADING, LIST_ITEM, PARAGRAPH} from "@editor/NodeNames"
+import UICommand from "@editor/ui/UICommand"
 
 export function setTextAlign(
     tr: Transaction,

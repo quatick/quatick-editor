@@ -4,8 +4,8 @@ import {EditorState, Transaction} from "prosemirror-state"
 import {CellSelection, mergeCells} from "prosemirror-tables"
 import {EditorView} from "prosemirror-view"
 
-import {PARAGRAPH, TABLE_CELL, TEXT} from "app/core/components/Editor/src/NodeNames"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
+import {PARAGRAPH, TABLE_CELL, TEXT} from "@editor/NodeNames"
+import UICommand from "@editor/ui/UICommand"
 
 function isBlankParagraphNode(node: Node | null | undefined): boolean {
     if (!node) {

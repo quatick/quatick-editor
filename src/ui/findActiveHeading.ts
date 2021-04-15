@@ -1,5 +1,5 @@
 import {EditorState} from "prosemirror-state"
-import {HEADING} from "app/core/components/Editor/src/NodeNames"
+import {HEADING} from "@editor/NodeNames"
 import {findParentNodeOfType} from "prosemirror-utils"
 export const HEADING_NAME_DEFAULT = "Normal"
 // [FS] IRAD-1042 2020-09-15

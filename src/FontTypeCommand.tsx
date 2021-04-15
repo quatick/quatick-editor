@@ -5,10 +5,10 @@ import { AllSelection, TextSelection } from "prosemirror-state"
 import { Transaction } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
 
-import { MARK_FONT_TYPE } from "app/core/components/Editor/src/MarkNames"
-import applyMark from "app/core/components/Editor/src/applyMark"
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+import { MARK_FONT_TYPE } from "@editor/MarkNames"
+import applyMark from "@editor/applyMark"
+import UICommand from "@editor/ui/UICommand"
+import { PopUpHandle } from "@editor/ui/createPopUp"
 
 function setFontType(tr: Transaction, schema: Schema, name: string): Transaction {
     const markType = schema.marks[MARK_FONT_TYPE]

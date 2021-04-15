@@ -1,8 +1,8 @@
-import isNodeSelectionForNodeType from "app/core/components/Editor/src/isNodeSelectionForNodeType"
+import isNodeSelectionForNodeType from "@editor/isNodeSelectionForNodeType"
 import { EditorState } from "prosemirror-state"
-import { MATH } from "app/core/components/Editor/src/NodeNames"
+import { MATH } from "@editor/NodeNames"
 import { AllSelection, TextSelection } from "prosemirror-state"
-import { MARK_FONT_SIZE, MARK_TEXT_COLOR } from "app/core/components/Editor/src/MarkNames"
+import { MARK_FONT_SIZE, MARK_TEXT_COLOR } from "@editor/MarkNames"
 
 const VALID_MATH_MARK_NAMES = new Set([MARK_FONT_SIZE, MARK_TEXT_COLOR])
 

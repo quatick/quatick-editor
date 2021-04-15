@@ -1,12 +1,12 @@
-import UICommand from "app/core/components/Editor/src/ui/UICommand"
-import applyMark from "app/core/components/Editor/src/applyMark"
-import isTextStyleMarkCommandEnabled from "app/core/components/Editor/src/isTextStyleMarkCommandEnabled"
+import UICommand from "@editor/ui/UICommand"
+import applyMark from "@editor/applyMark"
+import isTextStyleMarkCommandEnabled from "@editor/isTextStyleMarkCommandEnabled"
 import { EditorState } from "prosemirror-state"
 import { EditorView } from "prosemirror-view"
-import { MARK_FONT_SIZE } from "app/core/components/Editor/src/MarkNames"
+import { MARK_FONT_SIZE } from "@editor/MarkNames"
 import { Schema } from "prosemirror-model"
 import { Transaction } from "prosemirror-state"
-import { PopUpHandle } from "app/core/components/Editor/src/ui/createPopUp"
+import { PopUpHandle } from "@editor/ui/createPopUp"
 
 function setFontSize(tr: Transaction, schema: Schema, pt: number): Transaction {
     const markType = schema.marks[MARK_FONT_SIZE]

@@ -3,7 +3,7 @@ import { EditorState, TextSelection } from "prosemirror-state"
 import { CellSelection, TableMap } from "prosemirror-tables"
 import { findParentNodeOfType } from "prosemirror-utils"
 
-import { TABLE_CELL, TABLE_HEADER } from "app/core/components/Editor/src/NodeNames"
+import { TABLE_CELL, TABLE_HEADER } from "@editor/NodeNames"
 
 type Result = {
     node: Node<any> | null
