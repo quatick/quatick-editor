@@ -9702,11 +9702,6 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-material-design-icons@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/material-design-icons/-/material-design-icons-3.0.1.tgz#9a71c48747218ebca51e51a66da682038cdcb7bf"
-  integrity sha1-mnHEh0chjrylHlGmbaaCA4zct78=
-
 "mathlive@>= 0.55.0 < 1":
   version "0.60.1"
   resolved "https://registry.yarnpkg.com/mathlive/-/mathlive-0.60.1.tgz#365545c631026788143a512b8751baf24f0471e1"
